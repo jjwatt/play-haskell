@@ -19,10 +19,20 @@
 #       set +v
 #     '';
 #   }
-{ghc}:
-with (import <nixpkgs> {});
+
+{ pkgs ? import <nixpkgs> {}, ghc ? pkgs.ghc }:
+with pkgs;
+let
+	libs = [
+		gmp
+		libffi
+		ncurses
+		zlib
+	];
+in
 haskell.lib.buildStackProject {
   inherit ghc;
-  name = "myEnv";
-  buildInputs = [ zlib ];
+  name = "myBasicStackEnv";
+  buildInputs = libs;
+  src = if lib.inNixShell then null else ./.;
 }
