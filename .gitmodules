@@ -1,3 +1,6 @@
 [submodule "haskell-nix"]
 	path = haskell-nix
 	url = https://github.com/Gabriel439/haskell-nix.git
+[submodule "example-nix"]
+	path = example-nix
+	url = https://github.com/shajra/example-nix.git
