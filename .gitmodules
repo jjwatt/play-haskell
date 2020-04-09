@@ -4,3 +4,6 @@
 [submodule "example-nix"]
 	path = example-nix
 	url = https://github.com/shajra/example-nix.git
+[submodule "nix-haskell-monorepo"]
+	path = nix-haskell-monorepo
+	url = https://github.com/fghibellini/nix-haskell-monorepo.git
