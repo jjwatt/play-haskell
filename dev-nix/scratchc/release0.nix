@@ -1,5 +1,5 @@
 let
   pkgs = import <nixpkgs> { };
 in
-pkgs.haskellPackages.callPackage ./project0.nix { }
+pkgs.haskellPackages.callPackage ./scratchc.nix { }
 
